@@ -1,0 +1,41 @@
+
+body{
+   
+    margin:0;
+    background-color: white ; /* For browsers that do not support gradients */
+    background-image: radial-gradient(farthest-side at 85% 50%, #94A6B4, #1C3F60, black );
+  }
+
+  h1{
+    color: white;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 70px;
+  }
+.btn {
+    justify-content: center;
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+   }
+
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+
+.btn-5 {
+    background-image: linear-gradient(to right, #94A6B4 0%, #1C3F60 51%, #AFC1D0 100%);
+  }
+
+.shape {
+    height: 500px;
+    width: 500px;
+    background-color: #94A6B4 ;
+    border-radius: 25px;
+    opacity: 40%;
+  }

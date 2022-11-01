@@ -17,31 +17,102 @@
       crossorigin="anonymous"
     />
 
-     <!--Custom CSS-->
-     <link rel="stylesheet" href="style.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css" />
 
-      <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
-      <!-- place navbar here -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="navContainer">
+          <a class="navbar-brand" href="/"
+            ><img
+              src="./img/A-List Logo.png"
+              alt="A-List Collection"
+              id="nav_img"
+          /></a>
+          <a href="/">A-List Collections</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Sign-In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <nav class="navbar navbar-expand-lg nav row">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <div class="col-md-10">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a href="/"
+                  ><img
+                    src="./img/A-List Logo.png"
+                    alt="A-List Collection"
+                    id="nav_img"
+                /></a>
+              </li>
+              <li class="nav-item active">
+                <a href="/">A-List Collections</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <a href="/about">About</a>
+            <a href="#">My Deck</a>
+            <a class="btn" href="#">Sign-In</a>
+          </div>
+        </div>
+      </nav> -->
     </header>
     <div class="container">
       <div class="row">
         <div class="col">
           <h1>KEEP TRACK OF YOUR FAVORITE PLAYERS</h1>
-          <a class="btn btn-5" href="/A-List_Collections/A-List-Collections/search.html">Search for a player</a>
+          <a
+            class="btn btn-5"
+            href="/A-List_Collections/A-List-Collections/search.html"
+            >Search for a player</a
+          >
         </div>
         <div class="col">
           <div class="shape">
-              <img src="./img/cards.png" alt="">
+            <img src="./img/cards.png" alt="" />
           </div>
         </div>
       </div>
+    </div>
     <footer>
       <!-- place footer here -->
     </footer>

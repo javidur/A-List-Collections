@@ -3,13 +3,53 @@ user_input_form.addEventListener("submit", (event)=>{
     
     const searchTerm = playerSearch.value;
 
+    const returnedPlayerID = async function playerSearchByTeam(searchTerm, teamID){
+        debugger;
+        //get the athlete data filtered by team
+        let API_URL = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2022/teams/${teamID}/athletes?lang=en&region=us`;
+        let response = await fetch(API_URL);
+        let resultByTeam = await response.json();
     
-    async function playerSearchById(searchTerm){
+        console.log(resultByTeam);
+    
+        //create an array of individual athelete links
+            const playerLinkArray = resultByTeam.items.map((player)=>{
+                return player.$ref;
+            }); 
+            
+            let playerID =null;
+        //search through the links and drill in to find the athelete ID 
+        //TODO: loop through the other pages in the response
+            for(let i=0; i<playerLinkArray.length; i++){
+            let PLAYER_LINK_URL = playerLinkArray[i];
+            
+            let playerLinkResponse = await fetch(PLAYER_LINK_URL);
+            let playerLinkFromTeam = await playerLinkResponse.json();
+            let playerName = playerLinkFromTeam.displayName;
+            
+            //check to see if the search term is equal to the player name
+            if(searchTerm.toUpperCase() === playerName.toUpperCase()){
+                playerID = playerLinkFromTeam.id;
+            }
+            else{
+                console.log("Player not found"); //TODO:append the H tag here 
+            }
+            
+        }
+    //call the player search function using the athlete ID
+        playerSearchById(playerID); 
+        return playerID;
+        
+    }
+    returnedPlayerID(searchTerm,2); //TODO: pass in the team ID as a variable 
+    
+
+    async function playerSearchById(returnedPlayerID){
         debugger;
         //3139477 patrick mahomes - QB
         //3116406 tyreek hill - WR
         //3128720 nick chubb - RB
-        let API_URL = `https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/${searchTerm}`;
+        let API_URL = `https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/${returnedPlayerID}`;
        // let API_URL = "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3139477";
         let response = await fetch(API_URL);
         let result = await response.json();

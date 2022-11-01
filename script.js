@@ -2,10 +2,7 @@ user_input_form.addEventListener("submit", (event)=>{
     event.preventDefault();
     
     const searchTerm = playerSearch.value;
-    const header = document.createElement("h1");
-    header.textContent = searchTerm;
-    
-    container.appendChild(header);
+
     
     async function playerSearchById(searchTerm){
         debugger;

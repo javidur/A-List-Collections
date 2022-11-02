@@ -1,27 +1,70 @@
-user_input_form.addEventListener("submit", (event) => {
-  event.preventDefault();
+user_input_form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    
+    const searchTerm = playerSearch.value;
 
-  const searchTerm = playerSearch.value;
+    const returnedPlayerID = async function playerSearchByTeam(searchTerm, teamID){
+        debugger;
+        //get the athlete data filtered by team
+        let API_URL = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2022/teams/${teamID}/athletes?limit=100`;
+        let response = await fetch(API_URL);
+        let resultByTeam = await response.json();
+    
+        console.log(resultByTeam);
+    
+        //create an array of individual athelete links
+            const playerLinkArray = resultByTeam.items.map((player)=>{
+                return player.$ref;
+            }); 
+            
+            let playerID =null;
+        //search through the links and drill in to find the athelete ID 
+        //TODO: loop through the other pages in the response
+            for(let i=0; i<playerLinkArray.length; i++){
+            let PLAYER_LINK_URL = playerLinkArray[i];
+            
+            let playerLinkResponse = await fetch(PLAYER_LINK_URL);
+            let playerLinkFromTeam = await playerLinkResponse.json();
+            let playerName = playerLinkFromTeam.displayName;
+            
+            //check to see if the search term is equal to the player name
+            if(searchTerm.toUpperCase() === playerName.toUpperCase()){
+                playerID = playerLinkFromTeam.id;
+            }
+            else{
+                console.log("Player not found"); //TODO:append the H tag here 
+            }
+            
+        }
+    //call the player search function using the athlete ID
+        playerSearchById(playerID); 
+        return playerID;
+        
+    }
+    returnedPlayerID(searchTerm,2); //TODO: pass in the team ID as a variable 
+    
 
-  async function playerSearchById(searchTerm) {
-    debugger;
-    //3139477 patrick mahomes - QB
-    //3116406 tyreek hill - WR
-    //3128720 nick chubb - RB
-    let API_URL = `https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/${searchTerm}`;
-    // let API_URL = "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3139477";
-    let response = await fetch(API_URL);
-    let result = await response.json();
-    console.log(result);
-
-    renderCard(result);
-  }
-
-  playerSearchById(searchTerm);
-  user_input_form.reset();
-});
-
-function renderCard(result) {
+    async function playerSearchById(returnedPlayerID){
+        debugger;
+        //3139477 patrick mahomes - QB
+        //3116406 tyreek hill - WR
+        //3128720 nick chubb - RB
+        let API_URL = `https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/${returnedPlayerID}`;
+       // let API_URL = "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3139477";
+        let response = await fetch(API_URL);
+        let result = await response.json();
+        console.log(result);
+        
+        renderCard(result);
+    }
+    
+    playerSearchById(searchTerm);
+        user_input_form.reset();
+    
+    
+    });
+    
+    function renderCard(result) {
   //CARD FRONT
   const playerFullName = result.athlete.fullName;
   // const playerLastName = result.athlete.lastName;
@@ -50,7 +93,6 @@ function renderCard(result) {
   const stat4Name = currSeasonStats[3].displayName;
   const stat4Number = currSeasonStats[3].displayValue;
 
-  debugger;
   let template = getTemplate();
   template.find("#card_img").attr("src", playerHeadshot);
   template.find("#name").text(playerFullName);
@@ -79,3 +121,4 @@ function renderCard(result) {
 function getTemplate() {
   return $($("#card_template").html());
 }
+    

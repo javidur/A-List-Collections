@@ -1,7 +1,12 @@
+
+
+
 user_input_form.addEventListener("submit", (event)=>{
     event.preventDefault();
     
     const searchTerm = playerSearch.value;
+    let teamID = document.getElementById("teamDropDown").value;
+    
 
     const returnedPlayerID = async function playerSearchByTeam(searchTerm, teamID){
         debugger;
@@ -10,8 +15,6 @@ user_input_form.addEventListener("submit", (event)=>{
         let response = await fetch(API_URL);
         let resultByTeam = await response.json();
     
-        console.log(resultByTeam);
-    
         //create an array of individual athelete links
             const playerLinkArray = resultByTeam.items.map((player)=>{
                 return player.$ref;
@@ -19,14 +22,13 @@ user_input_form.addEventListener("submit", (event)=>{
             
             let playerID =null;
         //search through the links and drill in to find the athelete ID 
-        //TODO: loop through the other pages in the response
             for(let i=0; i<playerLinkArray.length; i++){
             let PLAYER_LINK_URL = playerLinkArray[i];
             
             let playerLinkResponse = await fetch(PLAYER_LINK_URL);
             let playerLinkFromTeam = await playerLinkResponse.json();
             let playerName = playerLinkFromTeam.displayName;
-            
+          
             //check to see if the search term is equal to the player name
             if(searchTerm.toUpperCase() === playerName.toUpperCase()){
                 playerID = playerLinkFromTeam.id;
@@ -41,7 +43,7 @@ user_input_form.addEventListener("submit", (event)=>{
         return playerID;
         
     }
-    returnedPlayerID(searchTerm,2); //TODO: pass in the team ID as a variable 
+    returnedPlayerID(searchTerm,teamID); 
     
 
     async function playerSearchById(returnedPlayerID){
@@ -57,17 +59,13 @@ user_input_form.addEventListener("submit", (event)=>{
         
         renderCard(result);
     }
-    
-    playerSearchById(searchTerm);
         user_input_form.reset();
-    
-    
     });
+
     
     function renderCard(result) {
   //CARD FRONT
   const playerFullName = result.athlete.fullName;
-  // const playerLastName = result.athlete.lastName;
   const number = result.athlete.jersey;
   const position = result.athlete.position.displayName;
   const currentTeam = result.athlete.team.displayName;

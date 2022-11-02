@@ -22,10 +22,16 @@ body {
 
 .navbar a {
   color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.navbar a:hover {
+  color:#AFC1D0 ;
 }
 
 .container {
@@ -35,6 +41,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.form-select{
+  background-color: #94a6b4 !important;
+  width:25% !important;
+   
 }
 
 .search-bar {
@@ -73,6 +85,15 @@ body {
   height: 60px;
   background: #afc1d0;
   cursor: pointer;
+}
+
+/* Button CSS*/
+button{
+  background:transparent;
+}
+.fa-solid{
+color: white;
+font-size: 20px;
 }
 
 /*

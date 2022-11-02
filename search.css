@@ -16,6 +16,18 @@ body {
   );
 }
 
+#nav_img {
+  height: 80px;
+}
+
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;

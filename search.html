@@ -1,39 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Page</title>
 
-<link rel="stylesheet" href="./search.css">
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-<body>
-  <div class="container">
-    <form action="" class="search-bar" id="user_input_form">
-      <input type="text" placeholder="Search for player" name="q" id="playerSearch">
-      <button id="search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-    </form>
-    <div id="card_container" class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="..." alt="Player" style="width:100px;height:100px;">
-          <h1>John Doe</h1>
-          <p>Team Name</p>
-          <p>Position</p>
-        </div>
-        <div class="flip-card-back">
-          <h1>Stats</h1>
-          <p>Lorem</p>
-          <p>Lorem</p>
+    <link rel="stylesheet" href="./search.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="search-bar" id="user_input_form">
+        <input
+          type="text"
+          placeholder="Search for player"
+          name="q"
+          id="playerSearch"
+        />
+        <button id="search" type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+    <div class="container" id="card_container"></div>
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0dd381954f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/Template" id="card_template">
+        <div id="card_container" class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="..."
+              alt="Player"
+              style="width: 100px; height: 100px"
+              id="card_img"
+            />
+            <h4 id="name">John Doe</h4>
+            <p id="team_name">Team Name</p>
+            <p id="position">Position</p>
+            <p id="number">Number</p>
+          </div>
+          <div class="flip-card-back">
+            <h5>Biography</h5>
+            <div class="row">
+              <div class="col-6">
+                <p id="height">Height</p>
+              </div>
+              <div class="col-6">
+                <p id="weight">Weight</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p id="birthdate">Birthdate</p>
+              </div>
+              <div class="col-6">
+                <p id="college">College</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p id="status">Status</p></div>
+              <div class="col-6"><p id="draftInfo">Draft Information</p></div>
+            </div>
+            <h5>Stats</h5>
+            <p id="currentYear">Current</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat1Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat1Value">Stat</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat2Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat2Value">Stat</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat3Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat3Value">Stat</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat4Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat4Value">Stat</p>
+              </div>
+            </div>
+            <button><i class="fa-solid fa-plus"></i></button>
+            <button><i class="fa-solid fa-trash-can"></i></button>
+          </div>
         </div>
       </div>
-    </div>
-   </div>
-    <script src="./card.js"></script>
-    <script src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/0dd381954f.js" crossorigin="anonymous"></script>
-</body>
+    </script>
+  </body>
 </html>

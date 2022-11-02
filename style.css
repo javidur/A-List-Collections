@@ -4,7 +4,7 @@
 
 .navbar a {
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
   padding: 14px 16px;
@@ -13,7 +13,7 @@
 }
 
 .navbar a:hover {
-  color:#AFC1D0 ;
+  color: #afc1d0;
 }
 
 .navbar-toggler-icon {
@@ -73,4 +73,17 @@ h1 {
   background-color: #94a6b4;
   border-radius: 25px;
   opacity: 40%;
+}
+
+label {
+  color: white;
+}
+
+#about_button {
+  background-color: darkblue;
+  color: white;
+}
+
+#form-comment {
+  color: white;
 }

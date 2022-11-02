@@ -61,6 +61,48 @@
     <div class="container mt-5">
       <h5 class="d-flex justify-content-center">We are so....</h5>
     </div>
+    <div class="container">
+      <h3 id="form-comment">Leave a Comment</h3>
+      <form
+        action="mailto:contactus@alistcollections.com"
+        method="post"
+        enctype="text/plain"
+        name="emailForm"
+      >
+        <div class="m-3">
+          <label class="form-label" for="name">Name:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            id="fullName"
+            placeholder="Full Name"
+          />
+        </div>
+        <div class="m-3">
+          <label class="form-label" for="email">Email:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="m-3">
+          <label class="form-label" for="comments">Comments:</label>
+          <textarea
+            class="form-control"
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="4"
+            placeholder="Comments"
+          ></textarea>
+        </div>
+        <button class="m-3" type="submit" id="about_button">Submit</button>
+      </form>
+    </div>
     <footer>
       <!-- place footer here -->
     </footer>

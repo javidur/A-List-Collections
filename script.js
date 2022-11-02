@@ -6,7 +6,7 @@ user_input_form.addEventListener("submit", (event)=>{
     const returnedPlayerID = async function playerSearchByTeam(searchTerm, teamID){
         debugger;
         //get the athlete data filtered by team
-        let API_URL = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2022/teams/${teamID}/athletes?lang=en&region=us`;
+        let API_URL = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2022/teams/${teamID}/athletes?limit=100`;
         let response = await fetch(API_URL);
         let resultByTeam = await response.json();
     

@@ -129,7 +129,7 @@ function localStorage(result) {
 }
 
 window.onload = () => {
-  let result = JSON.parse(localStorage.getItem(`player`));
+  let result = JSON.parse(localStorage.getItem("player"));
   console.log(result);
   renderCard(result);
 };

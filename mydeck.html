@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyDeck</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
@@ -17,47 +17,47 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid" id="navContainer">
-            <a class="navbar-brand" href="/"
-              ><img
-                src="./img/A-List Logo.png"
-                alt="A-List Collection"
-                id="nav_img"
-            /></a>
-            <a href="./index.html">A-List Collections</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo02"
-              aria-controls="navbarTogglerDemo02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon bg-white"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="./about.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./Signup/signup.html">Sign-Up</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./login.html">Login</a>
-                </li>
-              </ul>
-            </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="navContainer">
+          <a class="navbar-brand" href="/"
+            ><img
+              src="./img/A-List Logo.png"
+              alt="A-List Collection"
+              id="nav_img"
+          /></a>
+          <a href="./index.html">A-List Collections</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon bg-white"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Signup/signup.html">Sign-Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Login</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </header>
-      <h3>WELCOME TO YOUR DECK</h3>
-      <script type="text/Template" id="card_template">
+        </div>
+      </nav>
+    </header>
+    <h3 id="deck-page">WELCOME TO YOUR DECK</h3>
+    <script type="text/Template" id="card_template">
         <div id="card_container" class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -147,5 +147,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

@@ -313,7 +313,11 @@ form {
   right: 100%;
 }
 
-input[type=text], input[type=password], input[type=email]{
+#logName,
+#logPassword,
+#signEmail,
+#signName,
+#signPassword {
   display:block;
   position: relative;
   border: 4px solid #ffffff;
@@ -325,9 +329,12 @@ input[type=text], input[type=password], input[type=email]{
   outline: none;
 }
 
-input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+#logName:hover,
+#logPassword:hover,
+#signEmail:hover,
+#signName:hover,
+#signPassword:hover{
   border: 4px solid #1C3F60;
-
 }
 
 input[type=submit]{

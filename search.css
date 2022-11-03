@@ -7,13 +7,14 @@
 
 body {
   margin: 0;
-  background-color: darkblue; /* For browsers that do not support gradients */
+  background-color: #002C4B ; /* For browsers that do not support gradients */
   background-image: radial-gradient(
     farthest-side at 85% 50%,
     #94a6b4,
     #1c3f60,
     black
   );
+  background-size: cover;
 }
 
 #nav_img {
@@ -45,7 +46,7 @@ body {
 
 .form-select {
   background-color: #94a6b4 !important;
-  max-width: 53% !important;
+  max-width: 60% !important;
 }
 
 .search-bar {
@@ -60,7 +61,7 @@ body {
 }
 
 .search-bar input {
-  background: transparent;
+  background: #94a6b4;
   flex: 1;
   border: 0;
   outline: none;
@@ -83,6 +84,7 @@ body {
   height: 60px;
   background: #afc1d0;
   cursor: pointer;
+  float: right;
 }
 
 /* Button CSS*/
@@ -154,4 +156,11 @@ button {
 
 #col-select {
   min-width: 100%;
+  justify-content: center;
+  display: flex;
 }
+
+#user_input_form.search-bar {
+  margin: auto;
+}
+

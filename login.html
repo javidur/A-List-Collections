@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
 
     <link
@@ -22,11 +22,11 @@
           <div class="container-fluid" id="navContainer">
             <a class="navbar-brand" href="/"
               ><img
-                src="../img/A-List Logo.png"
+                src="./img/A-List Logo.png"
                 alt="A-List Collection"
                 id="nav_img"
             /></a>
-            <a href="../index.html">A-List Collections</a>
+            <a href="./index.html">A-List Collections</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -41,13 +41,13 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="../about.html">About</a>
+                  <a class="nav-link" href="./about.html">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../mydeck.html">MyDeck</a>
+                  <a class="nav-link" href="./mydeck.html">MyDeck</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../login.html">Login</a>
+                  <a class="nav-link" href="./Signup/signup.html">Sign-Up</a>
                 </li>
               </ul>
             </div>
@@ -57,23 +57,28 @@
 
       <div class="box">
 
-        <img src="../img/cards.png" style="filter: invert(85%) sepia(18%) saturate(252%) hue-rotate(165deg) brightness(89%) contrast(88%);">
+        <img src="./img/cards.png" style="filter: invert(85%) sepia(18%) saturate(252%) hue-rotate(165deg) brightness(89%) contrast(88%);">
         <div class="page">
             <div class="header">
-                <a id="signup" href="#signup">signup</a>
+                <a id="login" class="active" href="#login">login</a>
             </div>
             <div id="errorMsg"></div>
             <div class="content">
-                <form action="/register" name="signUpForm" onsubmit="return validateSignupForm()" method="POST">
-                    <input type="email" name="email" id="signEmail" placeholder="Email">
-                    <input type="text" name="name" id="signName" placeholder="Username">
-                    <input type="password" name="password" id="signPassword" placeholder="Password"><br>
-                    <input type="submit" value="Sign Up">
+                <form action="/login" name="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                    <input type="text" name="name" id="logName" placeholder="Username">
+                    <input type="password" name="password" id="logPassword" placeholder="Password">
+                    <div id="check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Login">
+                    <a href="#">Forgot Password?</a>
                 </form>
             </div>
         </div>
     </div>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script src="./signup.js"></script>
+      <script src="./Signup/signup.js"></script>
     </body>
 </html>

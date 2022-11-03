@@ -362,6 +362,9 @@ input[type=checkbox]{
 }
 
 /* Deck Page CSS */
-h1 {
+h3 {
   text-align: center;
+  color: white;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 70px;
 }

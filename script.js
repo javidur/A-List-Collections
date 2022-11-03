@@ -38,6 +38,7 @@ user_input_form.addEventListener("submit", (event) => {
       //check to see if the search term is equal to the player name
       if (searchTerm.toUpperCase() === playerName.toUpperCase()) {
         playerID = playerLinkFromTeam.id;
+        break;
       } else {
         console.log("Player not found"); //TODO:append the H tag here
       }
@@ -59,6 +60,7 @@ user_input_form.addEventListener("submit", (event) => {
     console.log(result);
 
     renderCard(result);
+    localStorage(result);
   }
   user_input_form.reset();
 });
@@ -119,3 +121,15 @@ function renderCard(result) {
 function getTemplate() {
   return $($("#card_template").html());
 }
+
+function localStorage(result) {
+  let storage = window.localStorage.setItem;
+  storage = ("player", JSON.stringify(result));
+  console.log(storage);
+}
+
+window.onload = () => {
+  let result = JSON.parse(localStorage.getItem(`player`));
+  console.log(result);
+  renderCard(result);
+};

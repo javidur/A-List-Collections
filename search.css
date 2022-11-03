@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  background-color: white; /* For browsers that do not support gradients */
+  background-color: blue; /* For browsers that do not support gradients */
   background-image: radial-gradient(
     farthest-side at 85% 50%,
     #94a6b4,
@@ -22,7 +22,7 @@ body {
 
 .navbar a {
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
   padding: 14px 16px;
@@ -31,29 +31,28 @@ body {
 }
 
 .navbar a:hover {
-  color:#AFC1D0 ;
+  color: #afc1d0;
 }
 
 .container {
   width: 100%;
-  min-height: 100vh;
-  /* padding: 5%; */
+  max-height: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
-.form-select{
+.form-select {
   background-color: #94a6b4 !important;
-  width:25% !important;
-   
+  max-width: 53% !important;
 }
 
 .search-bar {
   width: 100%;
   max-width: 400px;
   background: #94a6b4;
-  display: flex;
+  display: none;
   align-items: center;
   border-radius: 60px;
   padding: 10px 20px;
@@ -66,7 +65,6 @@ body {
   border: 0;
   outline: none;
   padding: 24px 20px;
-  font-size: 20px;
   color: #002c4b;
 }
 
@@ -88,18 +86,18 @@ body {
 }
 
 /* Button CSS*/
-button{
-  background:transparent;
+button {
+  background: transparent;
 }
-.fa-solid{
-color: white;
-font-size: 20px;
+.fa-solid {
+  color: white;
+  font-size: 20px;
 }
 
 /*
  * Flip card css */
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 300px;
   height: 100%;
   border: 1px solid #f1f1f1;
@@ -116,6 +114,10 @@ font-size: 20px;
   transform-style: preserve-3d;
 }
 
+#card_img {
+  filter: drop-shadow(10px 10px 24px #000);
+}
+
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -129,6 +131,7 @@ font-size: 20px;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  border: 1px solid #f1f1f1;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -142,4 +145,13 @@ font-size: 20px;
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+}
+
+#main_card_container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+#col-select {
+  min-width: 100%;
 }

@@ -55,58 +55,66 @@
       </nav>
     </header>
     <div class="container">
-      <!--SELECT A TEAM-->
-      <select class="form-select" aria-label="Default select example" id="teamDropDown">
-        <!-- <option selected>Select a Team</option> -->
-        <option value="1">ATLANTA FALCONS</option>
-        <option value="2">BUFFALO BILLS</option>
-        <option value="3">CHICAGO BEARS</option>
-        <option value="4">CINCINNATI BENGALS</option>
-        <option value="5">CLEVELAND BROWNS</option>
-        <option value="6">DALLAS COWBOYS</option>
-        <option value="7">DENVER BRONCOS</option>
-        <option value="8">DETROIT LIONS</option>
-        <option value="9">GREEN BAY PACKERS</option>
-        <option value="10">TENNESSEE TITANS</option>
-        <option value="11">INDIANAPOLIS COLTS</option>
-        <option value="12">KANSAS CITY CHIEFS</option>
-        <option value="13">LAS VEGAS RAIDERS</option>
-        <option value="14">LOS ANGELES RAMS</option>
-        <option value="15">MIAMI DOLPHINS</option>
-        <option value="16">MINNESOTA VIKINGS</option>
-        <option value="17">NEW ENGLAND PATRIOTS</option>
-        <option value="18">NEW ORLEANS SAINTS</option>
-        <option value="19">NEW YORK GIANTS</option>
-        <option value="20">NEW YORK JETS</option>
-        <option value="21">PHILADELHIA EAGLES</option>
-        <option value="22">ARIZONA CARDINALS</option>
-        <option value="23">PITTSBURGH STEELERS</option>
-        <option value="24">LOS ANGELES CHARGERS</option>
-        <option value="25">SAN FRANCISCO 49ERS</option>
-        <option value="26">SEATTLE SEAHAWKS</option>
-        <option value="27">TAMPA BAY BUCCANEERS</option>
-        <option value="28">WASHINGTON COMMANDERS</option>
-        <option value="29">CAROLINA PANTHERS</option>
-        <option value="30">JACKSONVILLE JAGUARS</option>
-        <option value="33">BALTIMORE RAVENS</option>
-        <option value="34">HOUSTON TEXANS</option>
-      </select>
-      <br>
-      <br>
-      <!--SEARCH FOR A PLAYER-->
-      <form action="" class="search-bar" id="user_input_form">
-        <input
-          type="text"
-          placeholder="Search for player"
-          name="q"
-          id="playerSearch"
-        />
-        <button id="search" type="submit">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-      </form>
+      <div class="row">
+        <div class="col m-4" id="col-select">
+          <!--SELECT A TEAM-->
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="teamDropDown"
+          >
+            <option value="">Select a Team</option>
+            <option value="1">ATLANTA FALCONS</option>
+            <option value="2">BUFFALO BILLS</option>
+            <option value="3">CHICAGO BEARS</option>
+            <option value="4">CINCINNATI BENGALS</option>
+            <option value="5">CLEVELAND BROWNS</option>
+            <option value="6">DALLAS COWBOYS</option>
+            <option value="7">DENVER BRONCOS</option>
+            <option value="8">DETROIT LIONS</option>
+            <option value="9">GREEN BAY PACKERS</option>
+            <option value="10">TENNESSEE TITANS</option>
+            <option value="11">INDIANAPOLIS COLTS</option>
+            <option value="12">KANSAS CITY CHIEFS</option>
+            <option value="13">LAS VEGAS RAIDERS</option>
+            <option value="14">LOS ANGELES RAMS</option>
+            <option value="15">MIAMI DOLPHINS</option>
+            <option value="16">MINNESOTA VIKINGS</option>
+            <option value="17">NEW ENGLAND PATRIOTS</option>
+            <option value="18">NEW ORLEANS SAINTS</option>
+            <option value="19">NEW YORK GIANTS</option>
+            <option value="20">NEW YORK JETS</option>
+            <option value="21">PHILADELHIA EAGLES</option>
+            <option value="22">ARIZONA CARDINALS</option>
+            <option value="23">PITTSBURGH STEELERS</option>
+            <option value="24">LOS ANGELES CHARGERS</option>
+            <option value="25">SAN FRANCISCO 49ERS</option>
+            <option value="26">SEATTLE SEAHAWKS</option>
+            <option value="27">TAMPA BAY BUCCANEERS</option>
+            <option value="28">WASHINGTON COMMANDERS</option>
+            <option value="29">CAROLINA PANTHERS</option>
+            <option value="30">JACKSONVILLE JAGUARS</option>
+            <option value="33">BALTIMORE RAVENS</option>
+            <option value="34">HOUSTON TEXANS</option>
+          </select>
+        </div>
+        <div class="col" - id="col-search">
+          <!--SEARCH FOR A PLAYER-->
+          <form action="" class="search-bar" id="user_input_form">
+            <input
+              type="text"
+              placeholder="Search for player"
+              name="q"
+              id="playerSearch"
+            />
+            <button id="search" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="container" id="card_container"></div>
+    <div class="container" id="main_card_container"></div>
     <script src="./script.js"></script>
     <script
       src="https://kit.fontawesome.com/0dd381954f.js"
@@ -119,7 +127,7 @@
             <img
               src="..."
               alt="Player"
-              style="width: 100px; height: 100px"
+              style="width: 180px; height: 120px"
               id="card_img"
             />
             <h4 id="name">John Doe</h4>

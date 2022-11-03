@@ -377,3 +377,8 @@ input[type="checkbox"] {
 #main_card_container {
   background-color: gray;
 }
+
+#about_paragraph {
+  font-family:"Poppins", sans-serif; ;
+}
+

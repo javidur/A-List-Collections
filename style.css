@@ -374,7 +374,11 @@ input[type="checkbox"] {
   font-size: 70px;
 }
 
-/*ABOUT PAGE CSS*/
+#main_card_container {
+  background-color: gray;
+}
+
 #about_paragraph {
   font-family:"Poppins", sans-serif; ;
 }
+

@@ -60,7 +60,9 @@ user_input_form.addEventListener("submit", (event) => {
     console.log(result);
 
     renderCard(result);
-    localStorage(result);
+    let player = "player";
+    player++;
+    localStorage.setItem(player, JSON.stringify(result));
   }
   user_input_form.reset();
 });
@@ -120,12 +122,6 @@ function renderCard(result) {
 
 function getTemplate() {
   return $($("#card_template").html());
-}
-
-function localStorage(result) {
-  let storage = window.localStorage.setItem;
-  storage = ("player", JSON.stringify(result));
-  console.log(storage);
 }
 
 window.onload = () => {

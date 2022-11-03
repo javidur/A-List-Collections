@@ -22,7 +22,7 @@
 
 body {
   margin: 0;
-  background-color: white; /* For browsers that do not support gradients */
+  background-color: darkblue; /* For browsers that do not support gradients */
   background-image: radial-gradient(
     farthest-side at 85% 50%,
     #94a6b4,

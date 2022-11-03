@@ -373,3 +373,8 @@ input[type="checkbox"] {
   font-family: "Rubik Mono One", sans-serif;
   font-size: 70px;
 }
+
+/*ABOUT PAGE CSS*/
+#about_paragraph {
+  font-family:"Poppins", sans-serif; ;
+}

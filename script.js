@@ -119,3 +119,5 @@ function renderCard(result) {
 function getTemplate() {
   return $($("#card_template").html());
 }
+
+

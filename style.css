@@ -360,3 +360,8 @@ input[type=checkbox]{
   color: #ffffff;
   font-size: 15px;
 }
+
+/* Deck Page CSS */
+h1 {
+  text-align: center;
+}

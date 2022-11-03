@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDeck</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid" id="navContainer">
+            <a class="navbar-brand" href="/"
+              ><img
+                src="./img/A-List Logo.png"
+                alt="A-List Collection"
+                id="nav_img"
+            /></a>
+            <a href="./index.html">A-List Collections</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Signup/signup.html">Sign-Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./login.html">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <h1>WELCOME TO YOUR DECK</h1>
+      <script type="text/Template" id="card_template">
+        <div id="card_container" class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="..."
+              alt="Player"
+              style="width: 180px; height: 120px"
+              id="card_img"
+            />
+            <h4 id="name">John Doe</h4>
+            <p id="team_name">Team Name</p>
+            <p id="position">Position</p>
+            <p id="number">Number</p>
+          </div>
+          <div class="flip-card-back">
+            <h5>Biography</h5>
+            <div class="row">
+              <div class="col-6">
+                <p id="height">Height</p>
+              </div>
+              <div class="col-6">
+                <p id="weight">Weight</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p id="birthdate">Birthdate</p>
+              </div>
+              <div class="col-6">
+                <p id="college">College</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p id="status">Status</p></div>
+              <div class="col-6"><p id="draftInfo">Draft Information</p></div>
+            </div>
+            <h5>Stats</h5>
+            <p id="currentYear">Current</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat1Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat1Value">Stat</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat2Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat2Value">Stat</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat3Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat3Value">Stat</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p id="stat4Name">Stat</p>
+              </div>
+              <div class="col-sm-6">
+                <p id="stat4Value">Stat</p>
+              </div>
+            </div>
+            <button><i class="fa-solid fa-plus"></i></button>
+            <button><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+</body>
+</html>

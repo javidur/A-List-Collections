@@ -108,6 +108,7 @@ label {
 .form-select {
   background-color: #94a6b4 !important;
   max-width: 60% !important;
+  margin: 10px;
 }
 
 .search-bar {

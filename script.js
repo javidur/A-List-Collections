@@ -23,10 +23,22 @@ user_input_form.addEventListener("submit", (event) => {
 
     //create an array of individual athelete links
     const playerLinkArray = resultByTeam.items.map((player) => {
-      return player.$ref;
+
+        function makeHTTPs(linkWithoutHTTPs){
+            const charactersOfInterest = "http://"
+            const charactersOfInterestLength = charactersOfInterest.length;
+            const charactersToReplaceWith = "https://"
+            const whereToCutFrom = linkWithoutHTTPs.indexOf(charactersOfInterest)
+            const urlWithoutHttp = linkWithoutHTTPs.substring(whereToCutFrom +charactersOfInterestLength)
+            const newLinkWithHttps = charactersToReplaceWith + urlWithoutHttp
+            return newLinkWithHttps
+    }
+
+      return makeHTTPs(player.$ref);
     });
 
     let playerID = null;
+    let count =0;
     //search through the links and drill in to find the athelete ID
     for (let i = 0; i < playerLinkArray.length; i++) {
       let PLAYER_LINK_URL = playerLinkArray[i];
@@ -41,6 +53,7 @@ user_input_form.addEventListener("submit", (event) => {
         break;
       } else {
         console.log("Player not found"); //TODO:append the H tag here
+        
       }
     }
     //call the player search function using the athlete ID
@@ -60,9 +73,7 @@ user_input_form.addEventListener("submit", (event) => {
     console.log(result);
 
     renderCard(result);
-    let player = "player";
-    player++;
-    localStorage.setItem(player, JSON.stringify(result));
+    localStorage(result);
   }
   user_input_form.reset();
 });
@@ -122,6 +133,12 @@ function renderCard(result) {
 
 function getTemplate() {
   return $($("#card_template").html());
+}
+
+function localStorage(result) {
+  let storage = window.localStorage.setItem;
+  storage = ("player", JSON.stringify(result));
+  console.log(storage);
 }
 
 window.onload = () => {
